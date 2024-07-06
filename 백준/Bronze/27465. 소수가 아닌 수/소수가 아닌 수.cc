@@ -13,15 +13,7 @@ void input() {
 }
 
 void solve() {
-    if (N == 2 || N==1) {
-        cout << 4;
-    }
-    else if (N % 2 == 0) {
-        cout << N + 2;
-    }
-    else {
-        cout << N + 1;
-    }
+    cout << 1000000000;
 }
 
 int main() {
