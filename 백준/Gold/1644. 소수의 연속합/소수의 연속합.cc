@@ -11,26 +11,26 @@ vector<int> v;
 void input() {
     cin >> N;
 
-    for (int i = 2; i <= N; i ++){
+    for (int i = 2; i <= 2001; i++) {
         if (number[i] != 0) {
             number[i]++;
             continue;
         }
 
-        for (int j = i; j <= N; j += i){
+        for (int j = i+i; j <= 4000000; j += i) {
             number[j]++;
         }
     }
 
-    for (int i = 2; i <= N; i++){
-        if (number[i] == 1) {
+    for (int i = 2; i <= N; i++) {
+        if (number[i] == 0) {
             v.push_back(i);
         }
     }
 }
 
 void solve() {
-    
+
     if (N == 1) {
         cout << 0;
         return;
