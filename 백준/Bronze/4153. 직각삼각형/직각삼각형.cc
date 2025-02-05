@@ -4,7 +4,7 @@
 
 using namespace std;
 
-vector<int> arr;
+int arr[3];
 
 int main()
 {
@@ -15,26 +15,19 @@ int main()
 	while (1) {
 
 		for (int i = 0; i < 3; i++){
-			int t;
-			cin >> t;
-			arr.push_back(t);
+			cin >> arr[i];
 		}
 
 		if (arr[0] == 0 && arr[1] == 0 && arr[2] == 0) break;
 
-		sort(arr.begin(), arr.end());
+		sort(arr, arr+size(arr));
 
-		int a = arr[0] * arr[0] + arr[1] * arr[1];
-		int b = arr[2] * arr[2];
-
-		if (a == b) {
+		if ((arr[0] * arr[0] + arr[1] * arr[1]) == (arr[2] *arr[2])) {
 			cout << "right\n";
 		}
 		else {
 			cout << "wrong\n";
 		}
-
-		arr.clear();
 	}
 
 	return 0;
