@@ -1,6 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 
 #include<iostream>
+#include<cmath>
 
 using namespace std;
 
@@ -16,7 +17,7 @@ int main() {
 	int M, N;
 	cin >> M >> N;
 
-	for (int i = 2; i <= N; i++)
+	for (int i = 2; i <= sqrt(N); i++)
 	{
 		if (arr[i] == 1) continue;
 		else {
