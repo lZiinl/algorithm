@@ -1,7 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
-
 #include<iostream>
-#include<cmath>
 
 using namespace std;
 
@@ -17,15 +15,12 @@ int main() {
 	int M, N;
 	cin >> M >> N;
 
-	for (int i = 2; i <= sqrt(N); i++)
+	for (int i = 2; i*i <= N; i++)
 	{
 		if (arr[i] == 1) continue;
-		else {
-			for (int j = 2; j <= N; j++)
-			{
-				if (i * j > 10000) continue;
-				arr[i*j] = 1;
-			}
+		for (int j = i * i; j <= N; j += i)
+		{
+			arr[j] = 1;
 		}
 	}
 
